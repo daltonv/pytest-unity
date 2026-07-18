@@ -1,0 +1,6 @@
+[requires]
+unity/2.6.0
+
+[tool_requires]
+cmake/4.4.0
+ninja/1.13.2
