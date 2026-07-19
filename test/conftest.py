@@ -1,10 +1,10 @@
 """Global fixtures for testing the plugin"""
 
 import shutil
+from pathlib import Path
+
 import pytest
 from pytest import Pytester
-
-from pathlib import Path
 
 TEST_DIR = Path(__file__).parent
 
