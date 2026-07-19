@@ -7,7 +7,7 @@ def test_standard_collection(build_c_proj, pytester):
     result = pytester.runpytest("build/", "--collect-only")
 
     # Check that both test files were collected and executed
-    result.stdout.fnmatch_lines(["*collected 3 items*"])
+    result.stdout.fnmatch_lines(["*collected 4 items*"])
 
 
 def test_name_collection(build_c_proj, pytester):
@@ -20,4 +20,4 @@ def test_name_collection(build_c_proj, pytester):
     result = pytester.runpytest("build/", "--collect-only")
 
     # Check that both test files were collected and executed
-    result.stdout.fnmatch_lines(["*collected 3 items*"])
+    result.stdout.fnmatch_lines(["*collected 4 items*"])
