@@ -14,3 +14,12 @@ def test_failing_test_case(build_c_proj, pytester):
 
     # Check that the test failed
     result.assert_outcomes(failed=1)
+
+
+def test_crashing_test_case(build_c_proj, pytester):
+    """Test that a crashing Unity test case is collected and executed."""
+    # Run pytest on the built Unity test executable
+    result = pytester.runpytest("build/test_crash")
+
+    # Check that the test failed
+    result.assert_outcomes(failed=1)
