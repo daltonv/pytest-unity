@@ -2,7 +2,7 @@
 
 int add(int lhs, int rhs)
 {
-    return lhs + rhs;
+    return lhs + rhs + 1;
 }
 
 int subtract(int lhs, int rhs)
