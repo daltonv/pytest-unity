@@ -1,0 +1,22 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+-   repo: local
+    hooks:
+        - id: ruff
+          name: ruff
+          entry: uv run --group lint ruff check --fix
+          language: system
+          types: [python]
+
+        - id: ruff-format
+          name: ruff-format
+          entry: uv run --group lint ruff format
+          language: system
+          types: [python]
+
+        - id: mypy
+          name: mypy
+          entry: uv run --group lint mypy
+          language: system
+          types: [python]

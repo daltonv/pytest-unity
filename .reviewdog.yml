@@ -1,0 +1,13 @@
+runner:
+  ruff:
+    cmd: uv run --group lint ruff check --output-format=concise .
+    errorformat:
+      - "%f:%l:%c: %m"
+    name: ruff
+    level: error
+  mypy:
+    cmd: uv run --group lint mypy --show-column-numbers .
+    errorformat:
+      - "%f:%l:%c: %t%*[^:]: %m"
+    name: mypy
+    level: error
